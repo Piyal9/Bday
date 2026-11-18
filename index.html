@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Caveat:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="confetti"></canvas>
+  <div class="deco" id="heroDeco" aria-hidden="true"></div>
+  <div class="bunting" id="bunting" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="small">Main-character energy</p>
+    <h1 aria-label="Happy Birthday, Srijita!"><span class="line1" data-split>Happy Birthday</span><span class="name" data-split>Srijita!</span></h1>
+    <p class="sub">We made you a little party. Scroll down and open everything.</p>
+    <a href="#cake" class="btn">Start the party</a>
+  </div>
+  <a href="#cake" class="scroll-cue" aria-label="Scroll down">&#8964;</a>
+</section>
+
+<!-- CAKE -->
+<section class="sec cake-sec" id="cake">
+  <h2>Make a wish, Lily</h2>
+  <p class="sub" id="cakeMsg">Blow out the candles. Tap the button or blow into your microphone.</p>
+  <svg class="cake" viewBox="0 0 300 260" aria-label="Birthday cake with candles">
+    <ellipse cx="150" cy="240" rx="130" ry="14" fill="#00000030"/>
+    <rect x="40" y="170" width="220" height="68" rx="14" fill="#ff8fb3"/>
+    <path d="M40 184q18 18 36 0t36 0 36 0 36 0 36 0 40 0v-14H40z" fill="#fff3f7"/>
+    <rect x="62" y="110" width="176" height="64" rx="14" fill="#ffd166"/>
+    <path d="M62 124q15 16 29 0t29 0 29 0 29 0 29 0 29 0v-14H62z" fill="#fff3f7"/>
+    <g id="candles">
+      <g class="candle" data-x="105"><rect x="99" y="62" width="12" height="48" rx="3" fill="#7ee0c3"/><path class="flame" d="M105 30q-12 14 0 28 12-14 0-28z"/></g>
+      <g class="candle" data-x="150"><rect x="144" y="56" width="12" height="54" rx="3" fill="#a78bfa"/><path class="flame" d="M150 24q-12 14 0 28 12-14 0-28z"/></g>
+      <g class="candle" data-x="195"><rect x="189" y="62" width="12" height="48" rx="3" fill="#7ee0c3"/><path class="flame" d="M195 30q-12 14 0 28 12-14 0-28z"/></g>
+    </g>
+  </svg>
+  <div class="row">
+    <button class="btn" id="blowBtn">Blow the candles</button>
+    <button class="btn ghost" id="relightBtn">Light them again</button>
+  </div>
+</section>
+
+<!-- LILY PHOTO -->
+<section class="sec photo-sec" id="lily">
+  <h2>The birthday star</h2>
+  <div class="frame">
+    <img src="100.jpeg" alt="Lily" onerror="this.parentElement.classList.add('missing')">
+    <span class="fallback">Add lily.png</span>
+  </div>
+  <p class="caption">Srijita, All smiles for the birthday star Cheers to many more laughs and good times together. 🥂🎂.</p>
+</section>
+
+<!-- LETTER -->
+<section class="sec letter-sec" id="letter">
+  <h2>A letter for you</h2>
+  <p class="sub">Tap the envelope to open it.</p>
+  <div class="envelope" id="envelope" tabindex="0" role="button" aria-label="Open the birthday letter">
+    <div class="flap"></div>
+    <div class="paper" id="paper" tabindex="0" aria-label="Birthday letter, scrollable">
+      <p>Dear Srijita,</p>
+      <p>Happy Birthday! Thank you for every beautiful moment, every heartfelt conversation, every shared smile, and all the little things that have woven themselves into the tapestry of unforgettable memories. Your presence has a rare and beautiful way of bringing light, warmth, and serenity into the lives of those fortunate enough to know you.</p>
+      <p>As you embark upon another blessed chapter of your journey, may the heavens shower you with boundless grace, divine blessings, everlasting happiness, good health, and success beyond your dreams. May your path be illuminated by celestial light, your heart forever find peace, and your soul be guided towards realms of endless possibilities, beautiful discoveries, and extraordinary blessings.</p>
+      <p>May you always preserve the purity of your heart, the kindness of your spirit, and the quiet magic that makes you so wonderfully unique. May the universe conspire in your favour, angels watch over your journey, and every prayer held within your heart find its way towards fulfilment.</p>
+      <p>Today, the world celebrates the beautiful gift of your existence. May this new year of life be nothing short of extraordinary, adorned with heavenly blessings, divine love, and moments that your soul will cherish for eternity.</p>
+      <p>Wishing you a truly blessed and magnificent birthday. May your light shine eternally, and may life always be as beautiful as the soul you carry.</p>
+      <p class="sign">With all love , Respect and Honour,<br>Piyal</p>
+    </div>
+    <div class="pocket"></div>
+  </div>
+  <button class="btn ghost letter-close" id="letterClose" type="button">Close letter</button>
+</section>
+
+<!-- GALLERY -->
+<section class="sec gallery-sec" id="gallery">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<linearGradient id="petalG" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd166"/><stop offset=".25" stop-color="#ffe3ee"/><stop offset="1" stop-color="#ff8fb3"/></linearGradient>
+<symbol id="lilyFlower" viewBox="0 0 100 100">
+<g fill="url(#petalG)" stroke="#fff" stroke-opacity=".7" stroke-width=".8"><path d="M50 50C38 32 42 12 50 3C58 12 62 32 50 50Z" transform="rotate(0 50 50)"/><path d="M50 50C38 32 42 12 50 3C58 12 62 32 50 50Z" transform="rotate(60 50 50)"/><path d="M50 50C38 32 42 12 50 3C58 12 62 32 50 50Z" transform="rotate(120 50 50)"/><path d="M50 50C38 32 42 12 50 3C58 12 62 32 50 50Z" transform="rotate(180 50 50)"/><path d="M50 50C38 32 42 12 50 3C58 12 62 32 50 50Z" transform="rotate(240 50 50)"/><path d="M50 50C38 32 42 12 50 3C58 12 62 32 50 50Z" transform="rotate(300 50 50)"/></g>
+<g stroke="#c2477a" stroke-width="1" fill="none"><path d="M50 50L50 24M50 50L73 37M50 50L27 37M50 50L71 65M50 50L29 65"/></g>
+<g fill="#ff9f43"><circle cx="50" cy="24" r="2.4"/><circle cx="73" cy="37" r="2.4"/><circle cx="27" cy="37" r="2.4"/><circle cx="71" cy="65" r="2.4"/><circle cx="29" cy="65" r="2.4"/></g>
+<circle cx="50" cy="50" r="3.2" fill="#9be37a"/>
+</symbol></defs></svg>
+<div class="lilies" aria-hidden="true">
+  <svg class="lily" style="--s:220px;--r:-20deg;left:-50px;top:2%" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:260px;--r:25deg;right:-40px;top:6%" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:150px;--r:10deg;left:6%;top:38%" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:170px;--r:-15deg;right:4%;top:45%" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:260px;--r:30deg;left:-60px;bottom:6%" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:230px;--r:-25deg;right:-50px;bottom:3%" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:140px;--r:5deg;left:42%;top:-40px" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+  <svg class="lily" style="--s:160px;--r:0deg;left:46%;bottom:-30px" viewBox="0 0 100 100"><use href="#lilyFlower"/></svg>
+</div>
+  <h2>Just You</h2>
+  <div class="grid">
+    <figure><img src="1.jpeg" alt=" 1"></figure>
+    <figure><img src="2.jpeg" alt=" 2"></figure>
+    <figure><img src="3.jpeg" alt=" 3"></figure>
+    <figure><img src="4.jpeg" alt=" 4"></figure>
+    <figure><img src="5.jpeg" alt=" 5"></figure>
+    <figure><img src="6.jpeg" alt=" 6"></figure>
+  </div>
+</section>
+
+<!-- BALLOONS -->
+<section class="sec balloon-sec" id="balloons">
+  <h2>Pop the balloons</h2>
+  <p class="sub">Popped: <strong id="popCount">0</strong> / <span id="popTotal">12</span></p>
+  <div class="sky" id="balloonField"></div>
+  <button class="btn" id="resetBalloons">Show balloons</button>
+</section>
+
+<!-- SKY -->
+<section class="sec sky-sec" id="sky">
+  <canvas id="fireworks"></canvas>
+  <div id="lanterns"></div>
+  <div class="sky-inner">
+    <h2>Light up the night sky</h2>
+    <p class="sub">Your Life Should Always be Beautiful like the Fireworks and lanterns, Sriju.</p>
+    <button class="btn" id="celebrateBtn">Celebrate Again</button>
+  </div>
+</section>
+
+<footer>
+  &copy; Copyright. All rights reserved. Made by
+  <a href="https://piyal9.github.io/Piyal_Web/"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="color: gold; text-decoration: none;">
+    Piyal Technologies
+  </a>
+</footer>
+
+<div class="modal" id="popup" role="dialog" aria-modal="true" aria-labelledby="popTitle" hidden>
+  <div class="modal-box">
+    <div class="modal-emoji" aria-hidden="true">&#127874;</div>
+    <h3 id="popTitle">Happy Birthday Cutie!</h3>
+    <p>May all your wishes come true.</p>
+    <button class="btn" id="popClose">Yeeeee!</button>
+  </div>
+</div>
+
+<audio id="bgm" src="play.mp3" loop preload="auto"></audio>
+<div class="song-panel" id="songPanel" hidden>
+  <h4>Choose a song</h4>
+  <div id="songList"></div>
+  <p class="song-now" id="songNow" aria-live="polite"></p>
+</div>
+<button class="song-btn" id="songBtn" aria-label="Choose a song" aria-expanded="false" aria-controls="songPanel">&#9776;</button>
+<button class="music" id="musicBtn" aria-label="Play or pause music" aria-pressed="false">&#9835;</button>
+
+<script src="script.js"></script>
+</body>
+</html>

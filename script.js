@@ -89,7 +89,7 @@ paper.addEventListener('keydown', e => e.stopPropagation());
 $('#letterClose').addEventListener('click', () => { env.classList.remove('open'); paper.scrollTop = 0; env.scrollIntoView({ block: 'center', behavior: 'smooth' }); });
 
 /* ---------- Balloons ---------- */
-const field = $('#balloonField'), TOTAL = 12; let popped = 0;
+const field = $('#balloonField'), TOTAL = 20; let popped = 0;
 $('#popTotal').textContent = TOTAL;
 function makeBalloons() {
   field.innerHTML = ''; popped = 0; $('#popCount').textContent = 0;
@@ -251,6 +251,18 @@ renderSongs();
     removeEventListener(ev, first);
     if (!userPaused && bgm.paused) playMusic();
   }, { passive: true }));
+
+/* when she reaches the Celebrate Again section, switch from Flatline to Radio (once) */
+let switchedToRadio = false;
+new IntersectionObserver((en, ob) => {
+  if (!en[0].isIntersecting || switchedToRadio) return;
+  switchedToRadio = true; ob.disconnect();
+  const radio = SONGS.findIndex(x => x.title === 'Radio');
+  if (current !== 0 || radio < 0) return;      // she already picked another song herself
+  const wasPlaying = !bgm.paused;
+  loadSong(radio);
+  if (wasPlaying) playMusic(); else renderSongs();
+}, { threshold: .4 }).observe($('#sky'));
 
 /* ---------- Hero animation ---------- */
 (function heroAnim() {
